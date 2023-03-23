@@ -1,0 +1,32 @@
+.Game {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.InfoPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  outline: 1px solid black;
+  margin-left: 20px;
+  height: fit-content;
+  padding: 10px;
+}
+
+.Score {
+  font-size: large;
+  font-weight: bold;
+}
+
+.NewGameButton {
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 0px;
+  cursor: pointer;
+  width: 100%;
+  background-color: white;
+}
