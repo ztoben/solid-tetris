@@ -22,8 +22,12 @@ export function Game(){
       setBoard(moveFallingShapeOnBoard(board(), 'right'));
     } else if (event.key === 'ArrowDown') {
       setBoard(moveFallingShapeOnBoard(board(), 'down'));
-    } else if (event.key === 'ArrowUp') {
-      setBoard(moveFallingShapeOnBoard(board(), 'rotate'));
+    } else if (event.key === 'ArrowUp' || event.key === 'x') {
+      setBoard(moveFallingShapeOnBoard(board(), 'rotate-clockwise'));
+    } else if (event.key === 'Control' || event.key === 'z') {
+      setBoard(moveFallingShapeOnBoard(board(), 'rotate-counter-clockwise'));
+    } else if (event.key === ' ') {
+      setBoard(moveFallingShapeOnBoard(board(), 'drop'));
     }
   };
 

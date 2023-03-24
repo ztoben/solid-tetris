@@ -2,7 +2,7 @@ import { Board, Cell, Piece, Row } from "../types";
 import { addPieceToBoard } from "./add-piece-to-board";
 import { getNextPiece } from './get-next-piece';
 
-function freezeAllFallingCells(board: Board) {
+export function freezeAllFallingCells(board: Board) {
   board.forEach((row: Row) => {
     row.forEach((cell: Cell) => {
       if (cell.isFalling) {
