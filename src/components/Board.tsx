@@ -16,9 +16,7 @@ export function Board(props: BoardProps) {
       )}
       {props.board?.map((row, rowIndex) => (
         row.map((cell, cellIndex) => (
-          <div class={styles.Cell} style={{background: cell.color}}>
-            {`${rowIndex}, ${cellIndex}`}
-          </div>
+          <div class={styles.Cell} style={{background: cell.color}} />
         ))
       ))}
     </div>
