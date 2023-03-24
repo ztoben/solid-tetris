@@ -91,7 +91,7 @@ export function moveFallingShapeOnBoard(board: Board | undefined, direction: str
       for (let i = 0; i < fallingCells.length; i++) {
         const { row, col } = fallingCells[i];
         const newRow = Math.round(averageHeightOfFallingCells - (col - averageWidthOfFallingCells));
-        const newCol = Math.round(averageWidthOfFallingCells + (row - averageHeightOfFallingCells));
+        const newCol = Math.ceil(averageWidthOfFallingCells + (row - averageHeightOfFallingCells));
 
         if (newCol < 0 || newCol >= rotatedBoard[row].length || newRow < 0 || newRow >= rotatedBoard.length || (rotatedBoard[newRow][newCol].value === 1 && !rotatedBoard[newRow][newCol].isFalling)) {
           return board;
@@ -113,7 +113,7 @@ export function moveFallingShapeOnBoard(board: Board | undefined, direction: str
       for (let i = 0; i < fallingCells.length; i++) {
         const { row, col } = fallingCells[i];
         const newRow = Math.round(averageHeightOfFallingCells + (col - averageWidthOfFallingCells));
-        const newCol = Math.round(averageWidthOfFallingCells - (row - averageHeightOfFallingCells));
+        const newCol = Math.ceil(averageWidthOfFallingCells - (row - averageHeightOfFallingCells));
 
         if (newCol < 0 || newCol >= rotatedBoard[row].length || newRow < 0 || newRow >= rotatedBoard.length || (rotatedBoard[newRow][newCol].value === 1 && !rotatedBoard[newRow][newCol].isFalling)) {
           return board;
